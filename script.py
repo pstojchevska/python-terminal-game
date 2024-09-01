@@ -18,3 +18,10 @@ def place_ship(board):
 
 ship_location = place_ship(board)
 
+
+def get_player_guess():
+    guess_row = int(input("Guess Row (0-4): "))
+    guesS_col = int(input("Guess Col (0-4): "))
+    return (guess_row, guesS_col)
+
+player_guess = get_player_guess()
