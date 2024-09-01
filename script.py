@@ -65,3 +65,11 @@ def get_player_guess():
                 print("Out of bounds! Try again.")
         except ValueError:
             print("Invalid input! Please enter numbers only.")
+
+
+def game_intro():
+    print("Welcome to Battleship!")
+    print("Try to sink the battleship by guessing its location on a 5x5 grid.")
+    print("You have 4 turns to find the battleship. Good luck!\n")
+
+game_intro()
