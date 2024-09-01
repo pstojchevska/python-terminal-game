@@ -25,3 +25,15 @@ def get_player_guess():
     return (guess_row, guesS_col)
 
 player_guess = get_player_guess()
+
+def check_guess(guess, ship_location):
+    if guess == ship_location:
+        print("Congratulations! You sunk the battleship!")
+        return True
+    else:
+        print("You missed!")
+        return False
+
+if not check_guess(player_guess, ship_location):
+    board[player_guess[0]][player_guess[1]] = "X"
+
