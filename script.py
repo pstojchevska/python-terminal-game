@@ -52,3 +52,16 @@ for turn in range(max_turns):
 
     if turn == max_turns - 1:
         print("Game Over! The battleship was at", ship_location)
+
+
+def get_player_guess():
+    while True:
+        try:
+            guess_row = int(input("Guess Row (0-4): "))
+            guess_col = int(input("Guess Col (0-4): "))
+            if 0 <= guess_row < board_size and 0 <= guess_col < board_size:
+                return (guess_row, guess_col)
+            else:
+                print("Out of bounds! Try again.")
+        except ValueError:
+            print("Invalid input! Please enter numbers only.")
