@@ -37,3 +37,18 @@ def check_guess(guess, ship_location):
 if not check_guess(player_guess, ship_location):
     board[player_guess[0]][player_guess[1]] = "X"
 
+
+max_turns = 4
+
+for turn in range(max_turns):
+    print(f"Turn {turn + 1}")
+    print_board(board)
+    player_guess = get_player_guess()
+
+    if check_guess(player_guess, ship_location):
+        break
+    else:
+        board[player_guess[0]][player_guess[1]] = "X"
+
+    if turn == max_turns - 1:
+        print("Game Over! The battleship was at", ship_location)
